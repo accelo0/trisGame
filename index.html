@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>tris!</title>
+        <script src="script.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            table, th {
+                border:1px solid black;
+            }
+
+            th {
+                height: 25%;
+                width: 25%;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="flex justify-center text-3xl font-bold underline">Benvenuto</h1>
+
+        <div class="flex justify-center my-6">
+
+            <table id="table" class="size-40">
+                <tr>
+                    <th class="" id="1" onclick="trisMove(this.id)"> </th>
+                    <th class="" id="2" onclick="trisMove(this.id)"> </th>
+                    <th class="" id="3" onclick="trisMove(this.id)"> </th>
+                </tr>
+                <tr>
+                    <th class="" id="4" onclick="trisMove(this.id)"> </th>
+                    <th class="" id="5" onclick="trisMove(this.id)"> </th>
+                    <th class="" id="6" onclick="trisMove(this.id)"> </th>
+                </tr>
+                <tr>
+                    <th class="" id="7" onclick="trisMove(this.id)"> </th>
+                    <th class="" id="8" onclick="trisMove(this.id)"> </th>
+                    <th class="" id="9" onclick="trisMove(this.id)"> </th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="grid justify-items-center flex items-center my-2">
+            <p id="player">Turno di: X</p>
+            <p id="errors" class="text-orange-600"></p>
+        </div>
+
+        <div class="flex justify-center">
+            <button onclick="resetGame()" class="group relative m-1 inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-b-2 border-l-2 border-r-2 border-red-700 bg-gradient-to-tr from-red-600 to-red-500 px-4 py-1 text-white shadow-lg transition duration-100 ease-in-out active:translate-y-0.5 active:border-red-600 active:shadow-none">
+                <span class="absolute h-0 w-0 rounded-full bg-white opacity-10 transition-all duration-300 ease-out group-hover:h-32 group-hover:w-32"></span>
+                <span class="relative font-medium">reset</span>
+           </button>
+        </div>
+    </body>
+</html>
